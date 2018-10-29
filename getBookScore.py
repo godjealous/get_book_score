@@ -24,7 +24,7 @@ for tag in tags[1:]:
         page = response.read().decode('utf-8')
         soup=BeautifulSoup(page,'html.parser')
         for book in soup("div",class_="info"):
-            if book==None or book.find("span",class_="rating_nums")==None or book.find("span",class_="rating_nums").get_text()==None:break
+            if book==None or book.find("span",class_="rating_nums")==None or book.find("span",class_="rating_nums").get_text()=='': continue
             score=float(book.find("span",class_="rating_nums").get_text())
             if score >= 9.5:
                 print(book.a['title'],score,subject)
