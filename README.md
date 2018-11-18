@@ -2,3 +2,4 @@
 getTag文件获得豆瓣上所有图书的标签
 getBookScore为主要文件，综合了getTag为函数，组成最后需要访问的网址
 test remote server
+there is a bug?
